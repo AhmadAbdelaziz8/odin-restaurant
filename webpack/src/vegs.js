@@ -1,33 +1,33 @@
-export default function generateVegs() {
-  // add vegs-page title
-  const vegsPageTitle = document.createElement("h2");
-  vegsPageTitle.textContent = "VEGS Menu";
-  //   add container of items
-  const itemsContainer = document.createElement("div");
+juicesPageTitle.textContent = "JUICES Menu";
+//   add container of items
+const itemsContainer = document.createElement("div");
 
-  // generate list of items
-  const vegsItems = [
-    { name: "Broccoli", price: "$4.99" },
-    { name: "Carrots", price: "$3.99" },
-    { name: "Spinach", price: "$2.99" },
-    { name: "Tomatoes", price: "$3.50" },
-    { name: "Zucchini", price: "$4.25" },
-    { name: "Asparagus", price: "$5.75" }
-  ];
+// generate list of items
+const juiceItems = [
+  { name: "Orange Juice", price: "$3.99" },
+  { name: "Apple Juice", price: "$3.50" },
+  { name: "Grapefruit Juice", price: "$4.25" },
+  { name: "Cranberry Juice", price: "$4.75" },
+  { name: "Pineapple Juice", price: "$4.99" },
+  { name: "Pomegranate Juice", price: "$5.25" },
+  { name: "Mango Juice", price: "$4.75" },
+  { name: "Watermelon Juice", price: "$4.50" },
+  { name: "Carrot Juice", price: "$4.99" },
+  { name: "Beet Juice", price: "$5.25" },
+];
 
-  vegsItems.forEach(item => {
-    // create items with prices beside it
-    const vegsItem = document.createElement("p");
-    vegsItem.textContent = item.name;
-    const vegsItemPrice = document.createElement("p");
-    vegsItemPrice.textContent = item.price;
-    const vegsItemContainer = document.createElement("div");
-    vegsItemContainer.classList.add("vegs-item");
-    // add to the DOM tree
-    vegsItemContainer.appendChild(vegsItem);
-    vegsItemContainer.appendChild(vegsItemPrice);
-    itemsContainer.appendChild(vegsItemContainer);
-  });
+juiceItems.forEach((item) => {
+  // create items with prices beside it
+  const juiceItem = document.createElement("p");
+  juiceItem.textContent = item.name;
+  const juiceItemPrice = document.createElement("p");
+  juiceItemPrice.textContent = item.price;
+  const juiceItemContainer = document.createElement("div");
+  juiceItemContainer.classList.add("juice-item");
+  // add to the DOM tree
+  juiceItemContainer.appendChild(juiceItem);
+  juiceItemContainer.appendChild(juiceItemPrice);
+  itemsContainer.appendChild(juiceItemContainer);
+});
 
-  return [vegsPageTitle, itemsContainer];
-}
+return [juicesPageTitle, itemsContainer];
