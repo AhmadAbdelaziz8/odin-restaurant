@@ -1,5 +1,5 @@
 export default function loadPage() {
-  const content = document.getElementById("content");
+  const header = document.querySelector("header");
 
   // Create and add elements
   const heading = document.createElement("h1");
@@ -8,6 +8,5 @@ export default function loadPage() {
   const paragraph = document.createElement("p");
   paragraph.textContent = "This is some description about the restaurant.";
 
-  content.appendChild(heading);
-  content.appendChild(paragraph);
+  header.append(heading, paragraph);
 }
