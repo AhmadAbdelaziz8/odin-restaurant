@@ -1,1 +1,4 @@
-alert("hey, I am being alerted!!");
+import "./style.css";
+import loadPage from "./pageLoad.js";
+
+loadPage();
